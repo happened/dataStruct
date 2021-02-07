@@ -21,10 +21,7 @@ func (g *Graph)addEdge(src nodeType,dst nodeType)*Graph {
 	for _,tempPoint:=range g.nodes{
 		if tempPoint.val==src{
 			curNode:=tempPoint
-			for curNode!=nil{
-				if curNode.next==nil{
-					break
-				}
+			for curNode.next!=nil{
 				if curNode.val==dst{
 					return g
 				}
